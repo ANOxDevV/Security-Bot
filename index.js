@@ -8,7 +8,7 @@ client.on("ready", async () => {
   console.log(`${client.guilds.cache.size} Servers .`);
   console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
  client.user.setStatus("invisible")
-  client.user.setActivity("j!help | Server ${client.guilds.cache.size} , Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},", {
+  client.user.setActivity("j!help", {
     type: "WATCHING"
   });
 });
