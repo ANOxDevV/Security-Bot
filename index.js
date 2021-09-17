@@ -61,7 +61,6 @@ client.on("message", async message => {
 > \`${prefix}ping\`
 > \`${prefix}uptime\`
 > \`${prefix}time\`
-> \`${prefix}message\`
 > **Admin Commands**
 > \`${prefix}ban\` 👉  @user
 > \`${prefix}kick\` 👉  @user
@@ -239,8 +238,8 @@ client.on("message", message => {
 
     let bwan = new Discord.MessageEmbed()
 
-      .setFooter("Has Been Channel Lock")
-      .setColor("#0000ff")
+      .setFooter("🔒 | Has Been Channel Lock")
+      .setColor("RANDOM")
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
@@ -256,8 +255,8 @@ client.on("message", message => {
 
     if (!message.channel.guild) return message.reply("SORRY IM IN SERVER");
     let bwan = new Discord.MessageEmbed()
-      .setFooter("Has Been Channel unlock")
-      .setColor("#0000ff")
+      .setFooter("🔓 | Has Been Channel unlock")
+      .setColor("RANDOM")
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
@@ -502,50 +501,6 @@ client.on('message',async message => {
 })
 
 
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "messages")) {
-    let args = message.content.split(" ").slice(1);
-    if (!message.member.hasPermission("OWNERSHIP"))
-      return message.reply("you dont have a Permission");
-
-    var user = message.mentions.users.first();
-    var rn = args.slice(1).join(" ");
-    let em = new Discord.MessageEmbed()
-      .setTitle("Error :")
-      .setColor("808080")
-      .setDescription(
-        `
-  **Usage:**
- ${prefix}messages (user) (reason)
-  ${prefix}messages ${message.author} 
-  ${prefix}messages ${message.author}  test
- 
-  `
-      )
-      .setAuthor(message.author.username, message.author.avatarURL());
-    if (!user) return message.channel.send(em);
-
-    let ffg = new Discord.MessageEmbed()
-      .setColor("#080808")
-      .setTimestamp()
-      .setTitle("Warned!")
-      .setDescription(
-        `
-
-
- warned by  : ${message.author.username}
- reason     : ${rn}
-
-
-  `
-      )
-      .setAuthor(message.author.username, message.author.avatarURL())
-      .setFooter(``);
-    message.channel.send(ffg);
-    user.send(ffg);
-    message.delete();
-  }
-});
 
 
 
