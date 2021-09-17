@@ -1,7 +1,6 @@
 {
-    "name": "discord-guardian",
+    "name": "security bot",
     "version": "0.0.1",
-    "description": "Guardian, a purpose built anti-nuke Discord bot.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
