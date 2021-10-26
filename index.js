@@ -53,41 +53,54 @@ client.on("message", async message => {
       .setTitle(`The Command List Of Bot`)
       .setDescription(`
 > **Info Commands**
-> \`${prefix}server\`
-> \`${prefix}id\`
-> \`${prefix}bot\`
-> \`${prefix}uptime\`
-> \`${prefix}invite\`
-> \`${prefix}support\`
-> \`${prefix}ping\`
-> \`${prefix}uptime\`
-> \`${prefix}time\`
+> \`${prefix}user \`
+> \`${prefix}bot list \`
+> \`${prefix}invite \`
+> \`${prefix}support \`
+> \`${prefix}ping \`
+> \`${prefix}say \`
+> \`${prefix}time \`
 > **Admin Commands**
-> \`${prefix}ban\` 👉  @user
-> \`${prefix}kick\` 👉  @user
-> \`${prefix}lock\`
-> \`${prefix}unlock\`
-> \`${prefix}lock all\`
-> \`${prefix}unlock all\`
-> \`${prefix}clear\`
-> \`${prefix}mute\` 👉  @user
-> \`${prefix}unmute\` 👉  @user
-> \`${prefix}slowmode\` 👉  **set the channel**
-> \`${prefix}prefix\`
+> \`${prefix}ban \` 👉  @user
+> \`${prefix}kick \` 👉  @user
+> \`${prefix}lock \`
+> \`${prefix}unlock \`
+> \`${prefix}lock all \`
+> \`${prefix}unlock all \`
+> \`${prefix}clear \`
+> \`${prefix}mute \` 👉  @user
+> \`${prefix}unmute \` 👉  @user
+> \`${prefix}slowmode \` 👉  **set the channel**
+> \`${prefix}prefix \`
 > **Security Commands**
-> \`${prefix}settings\`
-> \`${prefix}log\` 👉  set **#channel**
-> \`${prefix}stats\`
-> \`${prefix}logs\` 👉  **Someones ID**
-
-
+> \`${prefix}settings \`
+> \`${prefix}log \` 👉  set **#channel**
+> \`${prefix}stats \`
+> \`${prefix}logs \` 👉  **Someones ID**
+> **use onle owner ship or administrator or MENTION_EVERYONE send [@everyone]**
+> **anti link use onle owner ship ord administrator or manage emoji send [anti partner]**
 > [\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=801755429339529236&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/9n6dj99ZEN)
 `);
 
     message.channel.send(help);
   }
 });
+//////////
+client.on("message", message => {
+  if (message.content === prefix + "time") {
+    var currentTime = new Date(),
+      Year = currentTime.getFullYear(),
+      Month = currentTime.getMonth() + 1,
+      Day = currentTime.getDate();
 
+    var clinet = new Discord.MessageEmbed()
+      .setTitle("[ TODAY ]")
+      .setColor("BLACK")
+      .setTimestamp()
+      .setDescription("" + Day + "-" + Month + "-" + Year + "");
+    message.channel.send(clinet);
+  }
+});
 //////////////////
 client.on("message", message => {
   if (message.author.bot) return;
@@ -552,7 +565,33 @@ client.on("message", msg => {
     msg.channel.send("🔓 | **All Channels Unlocked**");
   }
 });
-
+////////////////////
+client.on("message", message => {
+  let commands = message.content.split(" ");
+  if (commands[0] == prefix + "say") {
+    if (!message.guild) return;
+    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** :x:");
+    if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR"))
+      return message.reply(
+        "Please Check My Role Permission To `ADMINISTRATOR :x: "
+      );
+    var args = message.content
+      .split(" ")
+      .slice(1)
+      .join(" ");
+    if (!args) {
+      return message.channel.send("`Usage : " + prefix + "say <message>`");
+    }
+    message.delete();
+    var embed = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setDescription(`${args}`)
+      .setFooter(`By ${message.author.tag}`);
+    message.channel.send(embed);
+  }
+});
+////////////
 
 
 
