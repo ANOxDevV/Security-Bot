@@ -82,7 +82,7 @@ client.on("message", async message => {
 
 **anti link use onle owner ship ord administrator or manage emoji send [anti partner]**
 
-[\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=801755429339529236&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/9n6dj99ZEN)
+[\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/9n6dj99ZEN)
 `);
 
     message.channel.send(help);
@@ -126,7 +126,7 @@ client.on("message", message => {
       .setColor("GREEN")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=799228179784794183&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot"
       );
     message.channel.send(embed);
      message.react(":white_check_mark:");
@@ -249,7 +249,7 @@ client.on("message", async message => {
         "**==> CLICK HERE TO  SUPPORT SERVER <==**"
       )
       .setURL(
-        `https://discord.gg/SEdp93xACp`)
+        `https://discord.gg/9n6dj99ZEN`)
    .setTimestamp()
          .setTimestamp()
 
