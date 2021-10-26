@@ -77,9 +77,12 @@ client.on("message", async message => {
 > \`${prefix}log \` 👉  set **#channel**
 > \`${prefix}stats \`
 > \`${prefix}logs \` 👉  **Someones ID**
-> **use onle owner ship or administrator or MENTION_EVERYONE send [@everyone]**
-> **anti link use onle owner ship ord administrator or manage emoji send [anti partner]**
-> [\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=801755429339529236&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/9n6dj99ZEN)
+
+**use onle owner ship or administrator or MENTION_EVERYONE send [@everyone]**
+
+**anti link use onle owner ship ord administrator or manage emoji send [anti partner]**
+
+[\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=801755429339529236&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/9n6dj99ZEN)
 `);
 
     message.channel.send(help);
