@@ -1,7 +1,7 @@
 const { Structures } = require('discord.js');
-
+ 
 const { limits, defaultPrefix } = require('../config.js');
-
+ 
 Structures.extend('Guild', Guild => {
     class GuildExt extends Guild {
         constructor(...args) {
