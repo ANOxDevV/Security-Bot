@@ -28,7 +28,7 @@ class PrefixCommand extends Command {
             return message.channel.send('***Sorry**, invalid permissions.*');
 
         // Check if similar prefix
-        if (prefix === args.prefix)
+        if (prefix === args.prefix) 
             return message.channel.send(
                 '***Sorry**, that is already the prefix.*'
             );
