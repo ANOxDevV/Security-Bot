@@ -3,7 +3,7 @@ const { adminCanChangeLimits } = require('../../config.js');
 
 class LoggingCommand extends Command {
     constructor() {
-        super('logging', {
+        super('logging', { 
             aliases: ['loggingchannel', 'logging', 'log'],
             args: [
                 {
