@@ -81,6 +81,18 @@ client.on("message", async message => {
 [invite bot](https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot) • [Support](https://discord.gg/dTNKbPXw9Y)
 `);
 
+const disbut = require("discord-buttons")
+ let button = new disbut.MessageButton()
+        .setStyle('url')
+        .setLabel('Invite')
+        .setURL('https://discord.com/oauth2/authorize?client_id=874800680269926420&permissions=8&scope=bot');////سيرفرك
+
+ let button1 = new disbut.MessageButton()
+        .setStyle('url')
+        .setLabel('Support')
+        .setURL(`https://discord.gg/KyD4S6e2dH`);
+
+
     message.channel.send(help);
   }
 });
