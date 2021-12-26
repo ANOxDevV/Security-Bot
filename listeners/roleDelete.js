@@ -25,5 +25,5 @@ module.exports = class RoleDeleteListener extends Listener {
 
         // Check limits
         role.guild.check_limits(entries, entry.executor.id, 'role_deletions');
-    }
+    } 
 };
