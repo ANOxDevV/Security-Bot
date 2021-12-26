@@ -8,7 +8,7 @@ module.exports = class ChannelDeleteListener extends Listener {
         });
     }
 
-    async exec(channel) {
+    async exec(channel) { 
         if (!channel.guild) return;
 
         // Fetch entry relating to action
