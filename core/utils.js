@@ -2,7 +2,7 @@ const parsems = require('parse-ms');
 
 module.exports = class Utils {
     constructor(client) {
-        this.client = client;
+        this.client = client; 
     }
 
     toProperCase(str) {
