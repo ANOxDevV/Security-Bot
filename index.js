@@ -26,7 +26,7 @@ const Discord = require('discord.js')
 const cooldown = new Set();
 const cdtime = 10;
 
- const prefix = "h!";
+ const prefix = "s!";
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
@@ -52,37 +52,33 @@ client.on("message", async message => {
       .setThumbnail(message.author.avatarURL())
       .setTitle(`The Command List Of Bot`)
       .setDescription(`
-> **Info Commands**
-> \`${prefix}user \`
-> \`${prefix}bot list \`
-> \`${prefix}invite \`
-> \`${prefix}support \`
-> \`${prefix}ping \`
-> \`${prefix}say \`
-> \`${prefix}time \`
-> **Admin Commands**
-> \`${prefix}ban \` 👉  @user
-> \`${prefix}kick \` 👉  @user
-> \`${prefix}lock \`
-> \`${prefix}unlock \`
-> \`${prefix}lock all \`
-> \`${prefix}unlock all \`
-> \`${prefix}clear \`
-> \`${prefix}mute \` 👉  @user
-> \`${prefix}unmute \` 👉  @user
-> \`${prefix}slowmode \` 👉  **set the channel**
-> \`${prefix}prefix \`
-> **Security Commands**
-> \`${prefix}settings \`
-> \`${prefix}log \` 👉  set **#channel**
-> \`${prefix}stats \`
-> \`${prefix}logs \` 👉  **Someones ID**
+**General Commands**
+\`s!user \`
+\`s!bot list \`
+\`s!invite \`
+\`s!support \`
+\`s!ping \`
+\`s!say \`
+\`s!time \`
+⚠️ **Admin Commands**
+\`s!ban \` 
+\`s!kick \` 
+\`s!lock \`
+\`s!unlock \`
+\`s!lock all \`
+\`s!unlock all \`
+\`s!clear \`
+\`s!mute \`
+\`s!unmute \`
+\`s!slowmode\` 
+\`s!prefix \`
+🔰 **Security Commands**
+\`s!settings \`
+\`s!log \`
+\`s!stats \`
+\`s!logs \`
 
-**use onle owner ship or administrator or MENTION_EVERYONE send [@everyone]**
-
-**anti link use onle owner ship ord administrator or manage emoji send [anti partner]**
-
-[\`invite bot\`](https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot) • [\`Support\`](https://discord.gg/dTNKbPXw9Y)
+[invite bot](https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot) • [Support](https://discord.gg/dTNKbPXw9Y)
 `);
 
     message.channel.send(help);
