@@ -1,7 +1,7 @@
 const { Listener } = require('discord-akairo');
 
 module.exports = class RoleCreateListener extends Listener {
-    constructor() {
+    constructor() { 
         super('roleCreate', {
             emitter: 'client',
             event: 'roleCreate'
