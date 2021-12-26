@@ -126,7 +126,7 @@ client.on("message", message => {
       .setColor("GREEN")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=922752221232369694&permissions=8&scope=bot"
       );
     message.channel.send(embed);
      message.react(":white_check_mark:");
@@ -399,7 +399,7 @@ client.on("message", async message => {
         "**==> CLICK HERE TO  SUPPORT SERVER <==**"
       )
       .setURL(
-        `https://discord.gg/9n6dj99ZEN`)
+        `https://discord.gg/xJR7Sn84yu`)
    .setTimestamp()
          .setTimestamp()
 
