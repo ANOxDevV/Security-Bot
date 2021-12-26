@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 class EvalCommand extends Command {
     constructor() {
         super('eval', {
-            aliases: ['eval'],
+            aliases: ['eval'], 
             ownerOnly: true
         });
     }
