@@ -1,2 +1,2 @@
-![](https://images-ext-2.discordapp.net/external/zd8CGgTxXIKNRTOCWg8YtDpkHrfwJoVkMXag9flMMIE/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/681553671364018196/94fd33dc53f1662660d718a067bea6fa.png?width=473&height=473)
-# JANO
+![](https://cdn.discordapp.com/attachments/922565772742635550/924595975589351484/1DFD9243-A044-40AB-A7B5-9EAB686869D0.png)
+# ANO
