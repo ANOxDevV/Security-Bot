@@ -4,7 +4,7 @@ const { limits } = require('../../config.js');
 class ResetCommand extends Command {
     constructor() {
         super('reset', {
-            aliases: ['reset'],
+            aliases: ['reset'], 
             args: [
                 {
                     id: 'type'
