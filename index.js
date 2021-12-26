@@ -291,7 +291,7 @@ client.on("message", message => {
       .setDescription(`
 
 
-**ANTI \`BOT\` ON** ✅
+**ANTI** \`BOT\` ON** ✅
 
 `
       )
@@ -329,7 +329,45 @@ client.on("message", message => {
       .setDescription(`
 
 
-**ANTI \`BOT\` OFF** ❌
+**ANTI** \`BOT\` **OFF** ❌
+
+`
+      )
+      .setColor("#0000")
+      .setThumbnail(message.author.avatarURL())
+      .setTimestamp()
+      .setFooter(`${message.author.tag}`, message.author.avatarURL());
+    message.channel.send({ embed });
+  }
+});
+
+client.on("message", message => {
+  if (message.content === prefix + "anti hack on") {
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    if (!message.channel.guild)
+      return message.channel.send(
+       "** | Sorry This Command Only For Servers .**"
+      );
+    let embed = new Discord.MessageEmbed()
+      
+        .setTitle("Click Here To Add " + `${client.user.username}` )
+         .setURL("https://discordapp.com/oauth2/authorize?client_id=" +`${client.user.id}` +"&scope=bot&permissions=2080374975")
+
+      .setDescription(`
+
+
+**ANTI** \`HACK\` **ON** 🟩
 
 `
       )
