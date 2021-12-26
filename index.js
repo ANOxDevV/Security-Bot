@@ -77,21 +77,13 @@ client.on("message", async message => {
 \`s!log \`
 \`s!stats \`
 \`s!logs \`
+\`anti bot\` **on / off**
+\`anti prone\` **on**
+\`anti hack\` **on**
+[Click Here To invite](https://discord.com/api/oauth2/authorize?client_id=922752221232369694&permissions=8&scope=bot) 
 
-[invite bot](https://discord.com/api/oauth2/authorize?client_id=890777487108370462&permissions=8&scope=bot) • [Support](https://discord.gg/dTNKbPXw9Y)
+[Click Here To Support](https://discord.gg/xJR7Sn84yu)
 `);
-
-const disbut = require("discord-buttons")
- let button = new disbut.MessageButton()
-        .setStyle('url')
-        .setLabel('Invite')
-        .setURL('https://discord.com/oauth2/authorize?client_id=874800680269926420&permissions=8&scope=bot');////سيرفرك
-
- let button1 = new disbut.MessageButton()
-        .setStyle('url')
-        .setLabel('Support')
-        .setURL(`https://discord.gg/KyD4S6e2dH`);
-
 
     message.channel.send(help);
   }
@@ -604,7 +596,43 @@ client.on("message", message => {
 });
 ////////////
 
+client.on("message", message => {
+  if (message.content === prefix + "anti prone") {
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    if (!message.channel.guild)
+      return message.channel.send(
+       "** | Sorry This Command Only For Servers .**"
+      );
+    let embed = new Discord.MessageEmbed()
+      
+        .setTitle("Click Here To Add " + `${client.user.username}` )
+         .setURL("https://discordapp.com/oauth2/authorize?client_id=" +`${client.user.id}` +"&scope=bot&permissions=2080374975")
 
+      .setDescription(`
+
+
+**ANTI PRONE ON** ✅
+
+`
+      )
+      .setColor("#0000")
+      .setThumbnail(message.author.avatarURL())
+      .setTimestamp()
+      .setFooter(`${message.author.tag}`, message.author.avatarURL());
+    message.channel.send({ embed });
+  }
+});
 
 
  ////////////////////
