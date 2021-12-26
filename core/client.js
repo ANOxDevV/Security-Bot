@@ -3,7 +3,7 @@ const {
     AkairoClient,
     CommandHandler,
     ListenerHandler
-} = require('discord-akairo');
+} = require('discord-akairo'); 
 const { ownerID, defaultPrefix } = require('../config.js');
 const db = require('quick.db');
 const Utils = require('./utils.js');
