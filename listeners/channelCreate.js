@@ -2,7 +2,7 @@ const { Listener } = require('discord-akairo');
 
 module.exports = class ChannelCreateListener extends Listener {
     constructor() {
-        super('channelCreate', {
+        super('channelCreate', { 
             emitter: 'client',
             event: 'channelCreate'
         });
@@ -29,5 +29,5 @@ module.exports = class ChannelCreateListener extends Listener {
             entry.executor.id,
             'channel_creations'
         );
-    }
+    } 
 };
