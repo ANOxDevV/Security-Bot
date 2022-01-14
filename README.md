@@ -1,4 +1,4 @@
 
-# Redo
+# Alex
 
-[**Me Server 🥲**](https://discord.gg/reda)
+[**Me Server 🥲**](https://discord.gg/Alex)
