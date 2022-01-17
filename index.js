@@ -771,4 +771,4 @@ client.on('guildDelete', guild => {
 
 
 client.login("تــــۆکین لێرە دانێ");
-////////Coded By Alex
+////////Coded By ANO
