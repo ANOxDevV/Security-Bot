@@ -1,4 +1,4 @@
 
-# Alex
+# ANOxDevV
 
-[**Me Server 🥲**](https://discord.gg/Alex)
+[**Me Server 🥲**](https://discord.gg/ano)
