@@ -8,7 +8,7 @@ client.on("ready", async () => {
   console.log(`${client.guilds.cache.size} Servers .`);
   console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
  client.user.setStatus("invisible")
-  client.user.setActivity("s!help | Ano Security Is Here", {
+  client.user.setActivity("s!help | Security Is Here", {
     type: "PLAYING"
   });
 });
