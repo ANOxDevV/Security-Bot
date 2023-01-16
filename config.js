@@ -1,7 +1,7 @@
 module.exports = {
     defaultPrefix: 's!',
-    ownerID: '922530000618528778',
-    _limits: 'The following are defaults.',
+    ownerID: '1014229255288274944',
+    _limits:'The following are defaults.',
     adminCanChangeLimits: true,
     limits: {
         user_removals: {
